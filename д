@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int n;
+  cout << "n= ";
+  cin >> n;
+  int *a = new int[n + 1];
+  for (int i = 0; i < n + 1; i++)
+    a[i] = i;
+  for (int p = 2; p < n + 1; p++)
+  {
+    if (a[p] != 0)
+    {
+      cout << a[p] << endl;
+      for (int j = p*p; j < n + 1; j += p)
+        a[j] = 0;
+    }
+  }
+  cin.get(); cin.get();
+}
+//это пример функции из инета, но она просто выводит массив простых чисел
+//мне нужно чтобы в мэйне я задавала простое число и она выводила ее порядковый номер в массиве
+
+undigned int num;
+int main()
+{
+	std::cout << "Enter index N = " << std::endl;
+	std::cin >> num;
+	unsigned int res = GetPrimeNumber(num);
+	if ((res != 0) and (res != 1))
+	{
+		std::cout << "Prime number with index " << num << " = " << res << std::endl;
+	}
+	else
+	{
+		std::cout << "Incorrect argument" << std::endl;
+	}
+	return 0;
+}
+//это хуйня которая должна быть для ввода и вывода
